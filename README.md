@@ -1,6 +1,8 @@
 # 🛠 Test-Driven Development basics on js
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-24292F?style=for-the-badge&logo=JavaScript&logoColor=F7DF1E)
+![Jest](https://img.shields.io/badge/-Jest-24292F?style=for-the-badge&logo=Jest&logoColor=C21325)
+![Vite](https://img.shields.io/badge/-Vite-24292F?style=for-the-badge&logo=Vite&logoColor=646CFF)
 
 Основы разработки через тестирование на JavaScript. Условия заданий было взято с учебной программы БГУиР для 3 курса.
 
