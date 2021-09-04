@@ -2,7 +2,7 @@
   "name": "tdd-basics",
   "version": "0.0.0",
   "scripts": {
-    "test": "jest --watchAll --verbose --coverage",
+    "test-dev": "jest --watchAll --verbose --coverage",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
