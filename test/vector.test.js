@@ -102,19 +102,88 @@ describe('Задание 3', () => {
   beforeEach(() => {
     vector = new Vector(3, 5, 2, 4, 6, 1)
   })
+
   it('Упорядочивание значений в векторе по возрастанию', () => {
     vector.sort(true)
     expect(vector.list).toEqual([1, 2, 3, 4, 5, 6])
   })
+
   it('Упорядочивание значений в векторе по убыванию', () => {
     vector.sort()
     expect(vector.list).toEqual([6, 5, 4, 3, 2, 1])
   })
-  it.todo('Нахождения в векторе первой последовательности элементы которой строго возрастают и удаления ее из вектора')
-  it.todo('Упорядочивания значений в векторе таким образом , что бы положительные значения переместились в начало его, отрицательные в конец, а нулевые остались бы на своих местах')
-  it.todo('Удаления из вектора значений нарушающих его упорядоченность (например, по возрастанию)')
-  it.todo('Нахождения и удаления из вектора всех не простых элементов (простое число – такое которое делится без остатка только на 1 и на само себя )')
-  it.todo('Нахождения в векторе 2 элементов с наибольшими значениями и замены их местами.')
-  it.todo('Нахождения в векторе чисел равных первому и удаления их из вектора')
-  it.todo('Нахождения в векторе всех чисел меньших или равных первому и удаление из вектора, первый элемент удаляется тоже')
+
+  it('Нахождения в векторе первой последовательности элементы которой строго возрастают и удаления ее из вектора', () => {
+    const vectors = [
+      vector,
+      new Vector(1, 2, 3, 4, 5),
+      new Vector(5, 4, 3, 2, 1),
+      new Vector(5, 2, 3, 4, 1)
+    ]
+    for (let item of vectors) {
+      item.removeFirstSequence()
+    }
+
+    expect(vectors[0].list).toEqual([2, 4, 6, 1])
+    expect(vectors[1].list).toEqual([])
+    expect(vectors[2].list).toEqual([5, 4, 3, 2, 1])
+    expect(vectors[3].list).toEqual([5, 1])
+  })
+
+  it('Положительные значения переместились в начало, отрицательные в конец, а нулевые остались бы на своих местах', () => {
+    const vectors = [
+      new Vector(2, 1, 0, -1, -2),
+      new Vector(-2, -1, 0, 1, 2),
+      new Vector(-2, 2, 0, 1, -1),
+      new Vector(-2, 2, 1, -1, 0),
+      new Vector(0, 1, 0, -1, 0, -2, 0, 2, 0)
+    ]
+
+    for (let item of vectors) {
+      item.extraSort()
+    }
+
+    expect(vectors[0].list).toEqual([2, 1, 0, -1, -2])
+    expect(vectors[1].list).toEqual([1, 2, 0, -2, -1])
+    expect(vectors[2].list).toEqual([2, 1, 0, -2, -1])
+    expect(vectors[3].list).toEqual([2, 1, -2, -1, 0])
+    expect(vectors[4].list).toEqual([0, 1, 0, 2, 0, -1, 0, -2, 0])
+
+    vectors[4].extraSort(true)
+
+    expect(vectors[4].list).toEqual([0, -1, 0, -2, 0, 1, 0, 2, 0])
+  })
+
+  it('Удаления значений нарушающих его упорядоченность (например, по возрастанию)', () => {
+    const vector_2 = new Vector(5, 2, 3, 4, 1)
+
+    vector.clearSequence()
+    vector_2.clearSequence(true)
+
+    expect(vector.list).toEqual([3, 5, 6])
+    expect(vector_2.list).toEqual([5, 2, 1])
+
+  })
+
+  it('Удаления всех не простых элементов (простое число – такое которое делится без остатка только на 1 и на само себя)', () => {
+    vector.removeNonSimple()
+
+    expect(vector.list).toEqual([3, 5, 2])
+  })
+
+  it('Заменить местами 2 элемента с наибольшими значениями', () => {
+    vector.swapTwoLargest()
+
+    expect(vector.list).toEqual([3, 6, 2, 4, 5, 1])
+  })
+
+  it('Удаление всех чисел меньших или равных первому, первый элемент удаляется тоже', () => {
+    const vector_1 = new Vector(1)
+
+    vector.removeLessOrEqualToFirst()
+    vector_1.removeLessOrEqualToFirst()
+
+    expect(vector.list).toEqual([5, 4, 6])
+    expect(vector_1.list).toEqual([1])
+  })
 })
