@@ -14,10 +14,10 @@
 $ npm run test-dev
 ```
 
-### Прогресс
+### Задания
 
 - [x] ➡️ [Вектор](./test/vector.test.js)
-- [ ] 📐 [Треугольник](./test/triangle.test.js)
+- [x] 📐 [Треугольник](./test/triangle.test.js)
 - [ ] 💠 [Фигуры](./test/figure.test.js)
 - [ ] 🛒 [Покупатель](./test/customer.test.js)
 - [ ] 😳 [Абонент](./test/subscriber.test.js)
