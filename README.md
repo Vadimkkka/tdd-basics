@@ -18,7 +18,7 @@ $ npm run test-dev
 
 - [x] ➡️ [Вектор](./test/vector.test.js)
 - [x] 📐 [Треугольник](./test/triangle.test.js)
-- [ ] 💠 [Фигуры](./test/figure.test.js)
+- [x] 💠 [Фигуры](./test/figure.test.js)
 - [ ] 🛒 [Покупатель](./test/customer.test.js)
 - [ ] 😳 [Абонент](./test/subscriber.test.js)
 - [ ] 🚛 [«Автобаза»](./test/motor-depot.test.js)
