@@ -1,4 +1,4 @@
-const Vector = require('../src/vector')
+import Vector from '@/vector'
 
 describe('Задание 1', () => {
   it('Создать 2 объекта класса – вектор (одномерный массив)', () => {
@@ -45,7 +45,7 @@ describe('Задание 1', () => {
   })
 
   describe('В первом объекте должны содержаться все четные, а во втором все нечетные числа исходных векторов', () => {
-    let vector_1, vector_2;
+    let vector_1: Vector, vector_2: Vector;
 
     beforeEach(() => {
       vector_1 = new Vector(0, 1, 2, 3, 4)
@@ -80,8 +80,8 @@ describe('Задание 1', () => {
 
 describe('Задание 2', () => {
   it('Реализовать перегрузку операций +, -, *, /, >, <, = и тд.', () => {
-    const vector_1 = new Vector(1, 2, 3, 4, 5)
-    const vector_2 = new Vector(1, 2)
+    const vector_1 = new Vector(1, 2, 3, 4, 5).valueOf()
+    const vector_2 = new Vector(1, 2).valueOf()
 
     expect(vector_1 + vector_2).toBe(7)
     expect(vector_2 - vector_1).toBe(-3)
@@ -98,7 +98,7 @@ describe('Задание 2', () => {
 })
 
 describe('Задание 3', () => {
-  let vector;
+  let vector: Vector;
   beforeEach(() => {
     vector = new Vector(3, 5, 2, 4, 6, 1)
   })

@@ -1,12 +1,12 @@
-const { Dot, Triangle } = require('../src/triangle');
+import { Point, Triangle } from '@/triangle'
 
 describe('Класс -> треугольник 📐', () => {
-  let triangle_1, triangle_2, triangle_3;
+  let triangle_1: Triangle, triangle_2: Triangle, triangle_3: Triangle;
 
   beforeEach(() => {
-    triangle_1 = new Triangle(new Dot(1, 2), new Dot(3, 4), new Dot(1, 6))
-    triangle_2 = new Triangle(new Dot(2, 2), new Dot(4, 4), new Dot(1, 6))
-    triangle_3 = new Triangle(new Dot(5, 4), new Dot(2, 1), new Dot(7, 3))
+    triangle_1 = new Triangle(new Point(1, 2), new Point(3, 4), new Point(1, 6))
+    triangle_2 = new Triangle(new Point(2, 2), new Point(4, 4), new Point(1, 6))
+    triangle_3 = new Triangle(new Point(5, 4), new Point(2, 1), new Point(7, 3))
   })
 
   it('Создания объектов', () => {
@@ -17,19 +17,19 @@ describe('Класс -> треугольник 📐', () => {
 
   it('Описать свойства для получения состояния объекта', () => {
     expect(triangle_1).toEqual({
-      A: new Dot(1, 2),
-      B: new Dot(3, 4),
-      C: new Dot(1, 6)
+      pointA: new Point(1, 2),
+      pointB: new Point(3, 4),
+      pointC: new Point(1, 6)
     })
     expect(triangle_2).toEqual({
-      A: new Dot(2, 2),
-      B: new Dot(4, 4),
-      C: new Dot(1, 6)
+      pointA: new Point(2, 2),
+      pointB: new Point(4, 4),
+      pointC: new Point(1, 6)
     })
     expect(triangle_3).toEqual({
-      A: new Dot(5, 4),
-      B: new Dot(2, 1),
-      C: new Dot(7, 3)
+      pointA: new Point(5, 4),
+      pointB: new Point(2, 1),
+      pointC: new Point(7, 3)
     })
   })
 
@@ -46,8 +46,8 @@ describe('Класс -> треугольник 📐', () => {
   })
 
   it('Вычисления точки пересечения медиан', () => {
-    expect(triangle_1.centroid).toEqual(new Dot(1.67, 4))
-    expect(triangle_2.centroid).toEqual(new Dot(2.33, 4))
-    expect(triangle_3.centroid).toEqual(new Dot(4.67, 2.67))
+    expect(triangle_1.centroid).toEqual(new Point(1.67, 4))
+    expect(triangle_2.centroid).toEqual(new Point(2.33, 4))
+    expect(triangle_3.centroid).toEqual(new Point(4.67, 2.67))
   })
 })

@@ -1,7 +1,7 @@
-const { Rectangle, Triangle, Circle } = require('../src/figure');
+import { Rectangle, Triangle, Circle } from '@/figure'
 
 describe('Абстрактный класс -> фигура 💠', () => {
-  let rectangle, triangle, circle;
+  let rectangle: Rectangle, triangle: Triangle, circle: Circle;
   beforeEach(() => {
     rectangle = new Rectangle(3, 5)
     triangle = new Triangle(2, 3, 4)

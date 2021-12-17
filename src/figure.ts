@@ -1,22 +1,13 @@
-class Figure {
-  constructor() {
-    if (this.constructor == Figure) {
-      throw new Error("Abstract classes can't be instantiated.");
-    }
-  }
-
-  get perimeter() {
-    throw new Error("Getter 'perimeter' must be implemented.");
-  }
-
-  get area() {
-    throw new Error("Getter 'area' must be implemented.");
-  }
+abstract class Figure {
+  abstract get perimeter(): number;
+  abstract get area(): number;
 }
 
-
 class Rectangle extends Figure {
-  constructor(a, b) {
+  a: number
+  b: number
+
+  constructor(a: number, b: number) {
     super()
     this.a = a
     this.b = b
@@ -31,7 +22,11 @@ class Rectangle extends Figure {
 }
 
 class Triangle extends Figure {
-  constructor(a, b, c) {
+  a: number
+  b: number
+  c: number
+
+  constructor(a: number, b: number, c: number) {
     super()
     this.a = a
     this.b = b
@@ -48,7 +43,8 @@ class Triangle extends Figure {
 }
 
 class Circle extends Figure {
-  constructor(radius) {
+  radius: number
+  constructor(radius: number) {
     super()
     this.radius = radius
   }
@@ -61,4 +57,5 @@ class Circle extends Figure {
   }
 }
 
-module.exports = { Rectangle, Triangle, Circle }
+export default Figure
+export { Rectangle, Triangle, Circle }
