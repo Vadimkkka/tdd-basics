@@ -17,10 +17,10 @@ $ npm run test-dev
 
 ### Задания
 
-- [x] ➡️ [Вектор](./test/vector.test.ts)
-- [x] 📐 [Треугольник](./test/triangle.test.ts)
-- [x] 💠 [Фигуры](./test/figure.test.ts)
-- [ ] 🛒 [Покупатель](./test/customer.test.ts)
+- [x] ➡️ [Вектор](./test/vector.test.ts) 👉 [```code```](./src/vector.ts)
+- [x] 📐 [Треугольник](./test/triangle.test.ts) 👉 [```code```](./src/triangle.ts)
+- [x] 💠 [Фигуры](./test/figure.test.ts) 👉 [```code```](./src/figure.ts)
+- [ ] 🛒 [Покупатель](./test/customer.test.ts) 👉 [```code```](./src/customer.ts)
 - [ ] 😳 [Абонент](./test/subscriber.test.js)
 - [ ] 🚛 [«Автобаза»](./test/motor-depot.test.js)
 - [ ] 🚉 [«Железнодорожная касса»](./test/railway-ticket-office.test.js)
