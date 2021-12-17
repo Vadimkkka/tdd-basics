@@ -1,6 +1,7 @@
 # 🛠 Test-Driven Development basics on js
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-24292F?style=for-the-badge&logo=JavaScript&logoColor=F7DF1E)
+![TypeScript](https://img.shields.io/badge/-TypeScript-24292F?style=for-the-badge&logo=TypeScript&logoColor=3178C6)
 ![Jest](https://img.shields.io/badge/-Jest-24292F?style=for-the-badge&logo=Jest&logoColor=C21325)
 ![Vite](https://img.shields.io/badge/-Vite-24292F?style=for-the-badge&logo=Vite&logoColor=646CFF)
 
