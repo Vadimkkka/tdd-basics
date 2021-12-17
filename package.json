@@ -2,16 +2,19 @@
   "name": "tdd-basics",
   "version": "0.0.0",
   "scripts": {
-    "test-dev": "jest --watchAll --verbose --coverage",
+    "test-dev": "jest --watchAll --coverage",
+    "test": "jest",
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.1",
+    "@types/jest": "^27.0.3",
+    "ts-node": "^10.4.0",
     "vite": "^2.5.1"
   },
   "dependencies": {
-    "jest": "^27.1.0"
+    "jest": "^27.1.0",
+    "ts-jest": "^27.0.7"
   }
 }
